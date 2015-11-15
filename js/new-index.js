@@ -93,8 +93,8 @@ _expandBlocks = function(id, title) {
 
 _collapseBlocks = function() {
 
-    //change title name back to "Andrew Millman"
-    $("#title").text("Andrew Millman");
+    //change title name back to "Greta Huang"
+    $("#title").text("Greta Huang");
 
     //make back button disappear
     $("#back-button").animate({
