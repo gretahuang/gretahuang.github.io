@@ -23,7 +23,7 @@ var contentInfo = {
         "projects": [
             {
                 "title": "Bioengineering",
-                "image": "2013.png",
+                "image": "2013-board.png",
                 "slogan": "Investigation of BHBM-Grafted Gold Nanoparticles as Drug Delivery Agents for Treatment of Cryptococcosis",
                 "description": "In this study, gold nanoparticles were fabricated, and then functionalized with a novel drug called BHBM. This drug had implications in the treatment of meningeal and pulmonary Cryptococcosis, a fungal disease. These gold nanoparticles were evaluated for efficacy as a drug delivery system for treatment of meningeal and pulmonary Cryptococcosis. This project took 1st place at the New York Science and Engineering Fair. This research was a part of the Garcia MRSEC program, under the mentorship of Dr. Miriam Rafailovich and Dr. Maurizio Del Poeta at Stony Brook University. ",
                 "link": "pdf/Abstract2013.pdf",
@@ -31,7 +31,7 @@ var contentInfo = {
             },
             {
                 "title": "Bioengineering",
-                "image": "2012.png",
+                "image": "2012-board.png",
                 "slogan": "Toward Breast Cancer Therapy and Early Tumor Detection: Receptor Mediated Cellular Uptake of Platinum Folate Nanoparticles and Their Influence on Cellular Mechanics",
                 "description": "Folate coatings on nanoparticles have implications in targeted treatment of cancer cells, whilst platinum cancer therapies already exist and are in use. This study aimed to combine these two findings, created a methodology for synthesis of a folate coated platinum nanoparticle. The study then investigated the novel nanoparticle's uptake in breast cancer cells, and its effectiveness in selective elimination of cancerous cells. The study additionally explored an Atomic Force Microscopy method for cancer detection at the single cell level on basis of differences in rigidity of the cellular membranes of cancerous and non-cancerous cells. This project took 3rd place at the Long Island Science and Engineering Fair. This research was a part of the Garcia MRSEC program, under the mentorship of Dr. Miriam Rafailovich and at Stony Brook University.",
                 "link": "pdf/Abstract2012.pdf",
