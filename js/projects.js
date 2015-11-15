@@ -39,17 +39,11 @@ $(document).ready(function() {
 
 
         //show right icons and highlight right header
-        if ($(window).scrollTop() < $("#android-nav-mark").position().top) { //position is in web section
+        if ($(window).scrollTop() >= $("#web-nav-mark").position().top) { //position is in web section
             $(".side-icon.web").css("left", "");
             $(".side-icon:not(.web)").css("left",-100);
             $(".project-nav-header:not(#web-nav-header)").removeClass("active");
             $("#web-nav-header").addClass("active");
-
-        } else if ($(window).scrollTop() >= $("#android-nav-mark").position().top && $(window).scrollTop() < $("#research-nav-mark").position().top) { //position is in android section
-            $(".side-icon:not(.android)").css("left", -100)
-            $(".side-icon.android").css("left", "");
-            $(".project-nav-header:not(#android-nav-header)").removeClass("active");
-            $("#android-nav-header").addClass("active");
 
         } else { //position is in research section
             $(".side-icon:not(.research)").css("left", -100);

@@ -272,7 +272,7 @@ MAIN SECTION BLOCKS
     transform: translate(0%, -100%);
 }
 
-#android-block {
+/*#android-block {
     background-color:#A4C639;
     float:right;
 }
@@ -297,7 +297,7 @@ MAIN SECTION BLOCKS
     -ms-transform: translate(0%, -100%);
     -o-transform: translate(0%, -100%);
     transform: translate(0%, -100%);
-}
+}*/
 
 #research-block {
     background-color:#419fd5;
