@@ -1,0 +1,169 @@
+@wrapper-size: 46px;
+@button-thickness: 2px;
+@line-distance: 11px;
+@anim-time: 0.4s;
+@text-color: white;
+@box-shadow: 0 0 7px rgba(0,0,0,0.5);
+
+.transition {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.transition-long {
+  -webkit-transition: all 0.6s ease;
+  -moz-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+}
+
+@-webkit-keyframes open-top {
+  50% { top: -1 * @button-thickness; margin: 0; -webkit-transform:rotate(0deg) }
+  100% { top: 50%; margin-top: -1 * @button-thickness; -webkit-transform:rotate(45deg); }
+}
+
+@-webkit-keyframes open-bottom {
+  50% { top: -1 * @button-thickness; margin: 0; -webkit-transform:rotate(0deg) }
+  100% { top: 50%; margin-top: -1 * @button-thickness; -webkit-transform:rotate(-45deg); }
+}
+
+@-webkit-keyframes open-middle {
+  50% {
+    width: 2 * @button-thickness;
+    height: 2 * @button-thickness;
+    left: 50%;
+    top: 50%;
+    margin-left: -@button-thickness;
+    border-radius:  @button-thickness;
+    border-width: @button-thickness;
+  }
+  100% {
+    width: 70%;
+    height: 70%;
+    left: 15%;
+    top: 15%;
+    margin: 0;
+    border-radius: 100%;
+    border-width: 2*@button-thickness;
+  }
+}
+
+@-webkit-keyframes close-top {
+  50% { top: -1 * @button-thickness; margin: 0; -webkit-transform:rotate(0deg) }
+  0% { top: 50%; margin-top: -1 * @button-thickness; -webkit-transform:rotate(45deg); }
+}
+
+@-webkit-keyframes close-bottom {
+  50% { top: -1 * @button-thickness; margin: 0; -webkit-transform:rotate(0deg) }
+  0% { top: 50%; margin-top: -1 * @button-thickness; -webkit-transform:rotate(-45deg); }
+}
+
+@-webkit-keyframes close-middle {
+  50% {
+    width: 2 * @button-thickness;
+    height: 2 * @button-thickness;
+    left: 50%;
+    top: 50%;
+    margin-left: -@button-thickness;
+    border-radius:  @button-thickness;
+    border-width: @button-thickness;
+  }
+  0% {
+    width: 70%;
+    height: 70%;
+    left: 15%;
+    top: 15%;
+    margin: 0;
+    border-radius: 100%;
+    border-width: 2*@button-thickness;
+  }
+}
+
+.menu-button-wrapper {
+  position: relative;
+  height: @wrapper-size;
+  width: @wrapper-size;
+  float: right;
+  .transition;
+
+  &:hover { opacity: 0.7; cursor: pointer; }
+
+  .menu-button {
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    height: 0px;
+    margin-top: -@button-thickness;
+    width: 60%;
+    border: @button-thickness solid @text-color;
+    border-radius: @button-thickness;
+    box-shadow: @box-shadow;
+
+    &.open {
+      box-shadow: none;
+
+      &:before, &:after { box-shadow: none; }
+    }
+
+
+    &:before {
+      position: absolute;
+      top: -@line-distance;
+      left: -@button-thickness;
+      height: 0px;
+      width: 100%;
+      border: @button-thickness solid @text-color;
+      border-radius: @button-thickness;
+      box-shadow: @box-shadow;
+      content: "";
+
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+
+    &:after {
+      position: absolute;
+      top: @line-distance - 2 * @button-thickness;
+      left: -@button-thickness;
+      height: 0px;
+      width: 100%;
+      border: @button-thickness solid @text-color;
+      border-radius: @button-thickness;
+      box-shadow: @box-shadow;
+      content: "";
+
+      -webkit-box-sizing: content-box;
+      -moz-box-sizing: content-box;
+      box-sizing: content-box;
+    }
+
+    &.open {
+      -webkit-animation: open-middle @anim-time ease forwards;
+
+      &:before {
+        -webkit-animation: open-top @anim-time ease forwards;
+      }
+
+      &:after {
+        -webkit-animation: open-bottom @anim-time ease forwards;
+      }
+    }
+
+    &.normal {
+      -webkit-animation: close-middle @anim-time ease forwards;
+
+      &:before {
+        -webkit-animation: close-top @anim-time ease forwards;
+      }
+
+      &:after {
+        -webkit-animation: close-bottom @anim-time ease forwards;
+      }
+    }
+  }
+}
