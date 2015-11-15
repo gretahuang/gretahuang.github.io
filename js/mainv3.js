@@ -1,6 +1,6 @@
 $(document).ready( function() {
 
-  var index = Math.floor(Math.random() * 4) + 1;
+  // var index = Math.floor(Math.random() * 4) + 1;
 
   // switch (index) {
   //   case 1:
@@ -42,7 +42,7 @@ $(document).ready( function() {
     var text = $(this).text();
 
     if (text != "Resume") {
-      populateSection(text);
+      populateSection("Coding Projects");
       $(".section-wrapper, .back-button").addClass("open");
       $(".transparent-overlay.section").addClass("section-open");
 
