@@ -42,7 +42,8 @@ $(document).ready( function() {
     var text = $(this).text();
 
     if (text != "Resume") {
-      populateSection("Coding Projects");
+      window.alert(text);
+      populateSection(text);
       $(".section-wrapper, .back-button").addClass("open");
       $(".transparent-overlay.section").addClass("section-open");
 
