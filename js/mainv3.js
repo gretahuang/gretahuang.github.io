@@ -41,7 +41,7 @@ $(document).ready( function() {
   $(".home-wrapper .button-wrapper .btn").click( function() {
     var text = $(this).text();
 
-    if (text != "Resume") {
+    // if (text != "Resume") {
       populateSection(text);
       $(".section-wrapper, .back-button").addClass("open");
       $(".transparent-overlay.section").addClass("section-open");
@@ -50,7 +50,7 @@ $(document).ready( function() {
         $(".section-wrapper, .back-button").removeClass("open");
         $(".transparent-overlay.section").removeClass("section-open");
       });
-    }
+    // }
   });
 
   //change theme
@@ -101,7 +101,6 @@ function adjustBgSize() {
 function populateSection( title ) {
   var sectionContainer = $(".section-wrapper .content .container");
   sectionContainer.html('').scrollTop(0);
-
   //for things that are not resume
   if (title != "Resume") {
     $.each( contentInfo[title].projects, function(i, val) {
@@ -128,26 +127,22 @@ function populateSection( title ) {
   //for resume
   else {
     sectionContainer.append(
-      '<div class="row">' +
-        '<div class="col-sm-12">' +
-          '<div class="project-name"><i class="fa fa-user"></i><br />Awards</div>' +
-          '<div class="project-description resume"></div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="row">' +
-        '<div class="col-sm-12">' +
-          '<div class="project-name"><i class="fa fa-trophy"></i><br />Activities</div>' +
-          '<div class="project-description resume"></div>' +
-        '</div>' +
+      '<div class="row" id="pdf-row">' +
+      '<embed src="http://gretahuang.me/resume.pdf" width="1160" height="545" type="application/pdf">' +
       '</div>'
     );
 
-    $.each( contentInfo[title].awards, function(i, val) {
-      sectionContainer.find($(".project-description")).first().append('<div class="resume-line">' + this + '</div>');
-    });
-
-    $.each( contentInfo[title].activities, function(i, val) {
-      sectionContainer.find($(".project-description")).last().append('<div class="resume-line">' + this + '</div>');
-    });
+    // embedpdf();
   }
+
+  // function embedPDF(){
+
+  //   var myPDF = new PDFObject({ 
+
+  //     url: 'http://gretahuang.me/resume.pdf'
+
+  //   }).embed('pdf-row'); 
+  //   // Be sure your document contains an element with the ID 'pdf-row' 
+
+  // }
 }

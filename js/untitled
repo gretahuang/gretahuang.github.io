@@ -1,0 +1,16 @@
+$(document).ready( function() {
+  $(".home-wrapper .button-wrapper .btn").click( function() {
+      var text = $(this).text();
+
+      if (text != "Resume") {
+        populateSection(text);
+        $(".section-wrapper, .back-button").addClass("open");
+        $(".transparent-overlay.section").addClass("section-open");
+
+        $(".back-button").unbind().click( function() {
+          $(".section-wrapper, .back-button").removeClass("open");
+          $(".transparent-overlay.section").removeClass("section-open");
+        });
+      }
+    });
+});
