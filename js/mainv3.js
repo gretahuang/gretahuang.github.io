@@ -128,7 +128,7 @@ function populateSection( title ) {
   else {
     sectionContainer.append(
       '<div class="row" id="pdf-row">' +
-      '<embed src="http://gretahuang.me/resume.pdf" width="1160" height="545" type="application/pdf">' +
+      '<embed src="http://gretahuang.me/resume.pdf" width="100%" height="600" type="application/pdf">' +
       '</div>'
     );
 
