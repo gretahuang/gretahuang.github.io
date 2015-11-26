@@ -125,15 +125,15 @@ function populateSection( title ) {
   }
 
   //for resume
-  else {
-    sectionContainer.append(
-      '<div class="row" id="pdf-row">' +
-      '<embed src="http://gretahuang.me/resume.pdf" width="100%" height="600" type="application/pdf">' +
-      '</div>'
-    );
+  // else {
+  //   sectionContainer.append(
+  //     '<div class="row" id="pdf-row">' +
+  //     '<embed src="http://gretahuang.me/resume.pdf" width="100%" height="600" type="application/pdf">' +
+  //     '</div>'
+  //   );
 
-    // embedpdf();
-  }
+  //   embedpdf();
+  // }
 
   // function embedPDF(){
 
