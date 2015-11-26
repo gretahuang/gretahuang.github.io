@@ -129,10 +129,14 @@ function populateSection( title ) {
     sectionContainer.append(
       '<div class="row">' +
         '<div class="col-sm-12">' +
+          '<div class="project-name"><i class="fa fa-user"></i><br />Awards</div>' +
+          '<div class="project-description resume"></div>' +
         '</div>' +
       '</div>' +
       '<div class="row">' +
         '<div class="col-sm-12">' +
+          '<div class="project-name"><i class="fa fa-trophy"></i><br />Activities</div>' +
+          '<div class="project-description resume"></div>' +
         '</div>' +
       '</div>'
     );
