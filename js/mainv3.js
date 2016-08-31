@@ -42,24 +42,24 @@ $(document).ready( function() {
     var text = $(this).text();
 
     // if (text != "Resume") {
-      // populateSection(text);
-      // $(".section-wrapper, .back-button").addClass("open");
-      // $(".transparent-overlay.section").addClass("section-open");
+      populateSection(text);
+      $(".section-wrapper, .back-button").addClass("open");
+      $(".transparent-overlay.section").addClass("section-open");
 
-      // $(".back-button").unbind().click( function() {
-      //   $(".section-wrapper, .back-button").removeClass("open");
-      //   $(".transparent-overlay.section").removeClass("section-open");
-      // });
+      $(".back-button").unbind().click( function() {
+        $(".section-wrapper, .back-button").removeClass("open");
+        $(".transparent-overlay.section").removeClass("section-open");
+      });
     // }
   });
 
   //change theme
-  // $(".side-menu .list-item.theme").click( function() {
-  //   var that = $(this);
-  //   if (!that.hasClass("active-item")) {
-  //     changeTheme(that.data("theme"));
-  //   }
-  // });
+  $(".side-menu .list-item.theme").click( function() {
+    var that = $(this);
+    if (!that.hasClass("active-item")) {
+      changeTheme(that.data("theme"));
+    }
+  });
 
   $(window).resize(function() {
     adjustBgSize();
@@ -68,11 +68,11 @@ $(document).ready( function() {
   //show page when loading complete
   $(window).load(function() {
     //unload the preloaded normal bg's done via side menu
-    // $(".side-menu .list-item.theme").removeClass("active");
+    $(".side-menu .list-item.theme").removeClass("active");
     //allow preloaded bg's to unload
     setTimeout( function() { $(".side-menu, .menu-button").addClass("normal").removeClass("open") }, 300);
     $(".section-wrapper, .back-button").removeClass("open");
-    setTimeout(function() { $("html").removeClass("loading") }, 500);
+    setTimeout(function() { $("html").removeClass("loading") }, 700);
   });
 
 });
@@ -140,14 +140,6 @@ function populateSection( title ) {
         '</div>' +
       '</div>'
     );
-
-    $.each( contentInfo[title].awards, function(i, val) {
-      sectionContainer.find($(".project-description")).first().append('<div class="resume-line">' + this + '</div>');
-    });
-
-    $.each( contentInfo[title].activities, function(i, val) {
-      sectionContainer.find($(".project-description")).last().append('<div class="resume-line">' + this + '</div>');
-    });
   }
 }
 
