@@ -125,50 +125,27 @@ function populateSection( title ) {
   }
 
   //for resume
-  else {
-    sectionContainer.append(
-      '<div class="row">' +
-        '<div class="col-sm-12">' +
-          '<div class="project-name"><i class="fa fa-user"></i><br />Awards</div>' +
-          '<div class="project-description resume"></div>' +
-        '</div>' +
-      '</div>' +
-      '<div class="row">' +
-        '<div class="col-sm-12">' +
-          '<div class="project-name"><i class="fa fa-trophy"></i><br />Activities</div>' +
-          '<div class="project-description resume"></div>' +
-        '</div>' +
-      '</div>'
-    );
-    $.each( contentInfo[title].awards, function(i, val) {
-      sectionContainer.find($(".project-description")).first().append('<div class="resume-line">' + this + '</div>');
-    });
-
-    $.each( contentInfo[title].activities, function(i, val) {
-      sectionContainer.find($(".project-description")).last().append('<div class="resume-line">' + this + '</div>');
-    });
-  }
-}
-
-  //for resume
   // else {
   //   sectionContainer.append(
-  //     '<div class="row" id="pdf-row">' +
-  //     '<embed src="http://gretahuang.me/resume.pdf" width="100%" height="600" type="application/pdf">' +
+  //     '<div class="row">' +
+  //       '<div class="col-sm-12">' +
+  //         '<div class="project-name"><i class="fa fa-user"></i><br />Awards</div>' +
+  //         '<div class="project-description resume"></div>' +
+  //       '</div>' +
+  //     '</div>' +
+  //     '<div class="row">' +
+  //       '<div class="col-sm-12">' +
+  //         '<div class="project-name"><i class="fa fa-trophy"></i><br />Activities</div>' +
+  //         '<div class="project-description resume"></div>' +
+  //       '</div>' +
   //     '</div>'
   //   );
+  //   $.each( contentInfo[title].awards, function(i, val) {
+  //     sectionContainer.find($(".project-description")).first().append('<div class="resume-line">' + this + '</div>');
+  //   });
 
-  //   embedpdf();
+  //   $.each( contentInfo[title].activities, function(i, val) {
+  //     sectionContainer.find($(".project-description")).last().append('<div class="resume-line">' + this + '</div>');
+  //   });
   // }
-
-  // function embedPDF(){
-
-  //   var myPDF = new PDFObject({ 
-
-  //     url: 'http://gretahuang.me/resume.pdf'
-
-  //   }).embed('pdf-row'); 
-  //   // Be sure your document contains an element with the ID 'pdf-row' 
-
-  // }
-// }
+}
