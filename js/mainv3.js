@@ -140,6 +140,13 @@ function populateSection( title ) {
         '</div>' +
       '</div>'
     );
+    $.each( contentInfo[title].awards, function(i, val) {
+      sectionContainer.find($(".project-description")).first().append('<div class="resume-line">' + this + '</div>');
+    });
+
+    $.each( contentInfo[title].activities, function(i, val) {
+      sectionContainer.find($(".project-description")).last().append('<div class="resume-line">' + this + '</div>');
+    });
   }
 }
 
