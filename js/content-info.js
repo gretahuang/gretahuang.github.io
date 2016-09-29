@@ -2,6 +2,15 @@ var contentInfo = {
     "Coding Projects": {
         "projects": [
             {
+                "title": "Replate Web Application",
+                "image": "replate.png",
+                "slogan": "Everybody Eats!",
+                "description": "Replate is a non-profit organization that matches extra food from businesses or individuals to communities in need. Our platform enables charities and people to recover food donations based on need and location.
+                Ongoing work with a team of Berkeley students through the Cal Blueprint organization.",
+                "link": "https://replate-staging.herokuapp.com/",
+                "color": "#2d8659"
+            },
+            {
                 "title": "UC Berkeley PTPS Website",
                 "image": "ptps_white.png",
                 "slogan": "(Active Webmaster)",
